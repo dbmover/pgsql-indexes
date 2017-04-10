@@ -49,6 +49,8 @@ class Plugin extends Indexes\Plugin
             $index['non_unique'] = !strpos($index['definition'], 'UNIQUE INDEX');
             preg_match('@USING (\w+) \(@', $index['definition'], $type);
             $index['type'] = "USING ".trim($type[1]);
+            // We use _PRIMARY internally; postgres prefers _pkey.
+            $index['index_name'] = preg_replace("@_pkey$@", '_PRIMARY', $index['index_name']);
         }
         return $indexes;
     }
@@ -58,9 +60,10 @@ class Plugin extends Indexes\Plugin
         return "DROP INDEX $index;";
     }
 
-    protected function dropPrimaryKey(string $table) : string
+    protected function dropPrimaryKey(string $index, string $table) : string
     {
-        return "ALTER TABLE $table DROP PRIMARY KEY;";
+        $index = preg_replace('@_PRIMARY$@', '_pkey', $index);
+        return "ALTER TABLE $table DROP CONSTRAINT $index;";
     }
 }
 
