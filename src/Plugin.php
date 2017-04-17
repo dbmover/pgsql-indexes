@@ -13,6 +13,8 @@ use PDO;
 
 class Plugin extends Indexes\Plugin
 {
+    const DEFAULT_INDEX_TYPE = 'USING btree';
+
     public function __invoke(string $sql) : string
     {
         $sql = preg_replace_callback(
