@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "062e6d7b02d5150dbffe0fa128fbc6ec",
-    "content-hash": "68a4af10dff9a500f4b6bd60c6aa3baa",
+    "hash": "f87e7997f61f4e30bb17a0c30909c072",
+    "content-hash": "575250c3801130da2e16b1acc7d1c4f7",
     "packages": [
         {
             "name": "dbmover/core",
-            "version": "0.7.1",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/core.git",
-                "reference": "f760731a578a7770310599fdb57e368f0a6b1edc"
+                "reference": "65ebb5fb410080f1a533892f86fe795923d74d28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/core/zipball/f760731a578a7770310599fdb57e368f0a6b1edc",
-                "reference": "f760731a578a7770310599fdb57e368f0a6b1edc",
+                "url": "https://api.github.com/repos/dbmover/core/zipball/65ebb5fb410080f1a533892f86fe795923d74d28",
+                "reference": "65ebb5fb410080f1a533892f86fe795923d74d28",
                 "shasum": ""
             },
             "require": {
@@ -50,24 +50,24 @@
                 }
             ],
             "description": "PHP-based database versioning tool, core components",
-            "time": "2018-03-24 16:34:39"
+            "time": "2018-03-24 17:47:12"
         },
         {
             "name": "dbmover/indexes",
-            "version": "0.6.3",
+            "version": "0.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/indexes.git",
-                "reference": "ce01ff637e08212ad50cfcb44145e04dd5de10ce"
+                "reference": "54ffb31aa4abb2bb1a2a6c369706a97db8eba6ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/indexes/zipball/ce01ff637e08212ad50cfcb44145e04dd5de10ce",
-                "reference": "ce01ff637e08212ad50cfcb44145e04dd5de10ce",
+                "url": "https://api.github.com/repos/dbmover/indexes/zipball/54ffb31aa4abb2bb1a2a6c369706a97db8eba6ad",
+                "reference": "54ffb31aa4abb2bb1a2a6c369706a97db8eba6ad",
                 "shasum": ""
             },
             "require": {
-                "dbmover/core": "^0.7.0",
+                "dbmover/core": "^0.8.0",
                 "php": ">=7.2"
             },
             "type": "library",
@@ -87,7 +87,7 @@
                 }
             ],
             "description": "Dbmover plugin to migrate indexes",
-            "time": "2018-03-24 08:00:23"
+            "time": "2018-03-24 17:59:13"
         },
         {
             "name": "monomelodies/kingconf",
