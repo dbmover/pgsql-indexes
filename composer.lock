@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "dbmover/core",
-            "version": "0.7.0",
+            "version": "0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/core.git",
-                "reference": "b94862d0a6f24ff7be859b3187cddbe52513fcc3"
+                "reference": "f760731a578a7770310599fdb57e368f0a6b1edc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/core/zipball/b94862d0a6f24ff7be859b3187cddbe52513fcc3",
-                "reference": "b94862d0a6f24ff7be859b3187cddbe52513fcc3",
+                "url": "https://api.github.com/repos/dbmover/core/zipball/f760731a578a7770310599fdb57e368f0a6b1edc",
+                "reference": "f760731a578a7770310599fdb57e368f0a6b1edc",
                 "shasum": ""
             },
             "require": {
@@ -50,7 +50,7 @@
                 }
             ],
             "description": "PHP-based database versioning tool, core components",
-            "time": "2018-03-24 07:05:17"
+            "time": "2018-03-24 16:34:39"
         },
         {
             "name": "dbmover/indexes",
