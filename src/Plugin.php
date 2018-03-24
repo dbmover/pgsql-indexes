@@ -15,6 +15,10 @@ class Plugin extends Indexes\Plugin
 {
     const DEFAULT_INDEX_TYPE = 'USING btree';
 
+    /**
+     * @param string $sql
+     * @return string
+     */
     public function __invoke(string $sql) : string
     {
         $sql = preg_replace_callback(
@@ -30,6 +34,9 @@ class Plugin extends Indexes\Plugin
         return parent::__invoke($sql);
     }
 
+    /**
+     * @return array
+     */
     protected function existingIndexes() : array
     {
         $stmt = $this->loader->getPdo()->prepare(
@@ -57,11 +64,21 @@ class Plugin extends Indexes\Plugin
         return $indexes;
     }
 
+    /**
+     * @param string $index
+     * @param string $table
+     * @return string
+     */
     protected function dropIndex(string $index, string $table) : string
     {
         return "DROP INDEX $index;";
     }
 
+    /**
+     * @param string $index
+     * @param string $table
+     * @return string
+     */
     protected function dropPrimaryKey(string $index, string $table) : string
     {
         $index = preg_replace('@_PRIMARY$@', '_pkey', $index);
