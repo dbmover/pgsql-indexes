@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "dbmover/indexes": "^0.6.0"
+        "php": ">=7.2",
+        "dbmover/indexes": "^0.6.3"
     },
     "autoload": {
         "psr-4": {
