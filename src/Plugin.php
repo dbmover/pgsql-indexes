@@ -45,9 +45,11 @@ class Plugin extends Indexes\Plugin
                 JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
                 JOIN pg_catalog.pg_index i ON i.indexrelid = c.oid
                 JOIN pg_catalog.pg_class t ON i.indrelid   = t.oid
+                LEFT JOIN pg_constraint o ON conname = c.relname AND contype = 'x'
             WHERE c.relkind = 'i'
                 AND n.nspname = 'public'
                 AND pg_catalog.pg_table_is_visible(c.oid)
+                AND o.conname IS NULL
             ORDER BY n.nspname, t.relname, c.relname");
         $stmt->execute([]);
         $indexes = $stmt->fetchAll(PDO::FETCH_ASSOC);
